@@ -12,8 +12,8 @@ clear :-
 negativeLiteral(not Literal) :- atom(Literal).
 
 % Predicado para saber si dos literales son complementarios
-complement(X, not X).
-complement(not X, X).
+complement(X, not X) :- atom(X).
+complement(not X, X) :- atom(X).
 
 % Predicado para saber si es refutable un conjunto de clausulas
 isRefutable([]).
